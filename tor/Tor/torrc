@@ -1,0 +1,19 @@
+ControlPort 9051
+DirPort 9030
+reject *:25
+reject *:119
+reject *:135-139
+reject *:445
+reject *:563
+reject *:1214
+reject *:4661-4666
+reject *:6346-6429
+reject *:6699
+reject *:6881-6999
+accept *:*
+HashedControlPassword
+16:91495A0B7CBC41C76073E1EC00A5CF1510D41462884391CCB24BF489F1
+Log notice stdout – выводить сообщения в консоль
+Nickname HelloXakep
+ORPort 9001
+SocksListenAddress 127.0.0.1

@@ -1,0 +1,5 @@
+ControlPort 9051
+HashedControlPassword 16:76739E03CB154B0060CFADFECF94D5DB8CFA5A7A4E6FBD05A408710931
+Log notice stdout
+Nickname HelloXakep
+SocksListenAddress 127.0.0.1
