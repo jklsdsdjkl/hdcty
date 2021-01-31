@@ -51,7 +51,6 @@ def find_captcha_data(num):
     inputs_tag = soup.find_all("input")
     input_tag = inputs_tag[num]
     data_captcha = input_tag['value']
-    print(data_captcha)
     return data_captcha
 
 
@@ -86,7 +85,7 @@ def send_captcha_to_formfp(ses, origin):
     captchs = re_captchs[0]
     check_capt = captchs['name']
     if check_capt != "_token":
-        print("Ошибка. Первая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Первая капча была не правильной. Производим повторную отправку 1/6")
         data = {
             "captcha": send_captcha_base64(find_captcha_base64_frpage(0, origin)),
             "captchaData": find_captcha_data(1),
@@ -101,7 +100,7 @@ def send_captcha_to_formfp(ses, origin):
         check_capt = captchs['name']
 
     if check_capt != "_token":
-        print("Ошибка. Первая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Первая капча была не правильной. Производим повторную отправку 2/6")
         data = {
             "captcha": send_captcha_base64(find_captcha_base64_frpage(0, origin)),
             "captchaData": find_captcha_data(1),
@@ -116,7 +115,7 @@ def send_captcha_to_formfp(ses, origin):
         check_capt = captchs['name']
 
     if check_capt != "_token":
-        print("Ошибка. Первая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Первая капча была не правильной. Производим повторную отправку 3/6")
         data = {
             "captcha": send_captcha_base64(find_captcha_base64_frpage(0, origin)),
             "captchaData": find_captcha_data(1),
@@ -131,7 +130,7 @@ def send_captcha_to_formfp(ses, origin):
         check_capt = captchs['name']
 
     if check_capt != "_token":
-        print("Ошибка. Первая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Первая капча была не правильной. Производим повторную отправку 4/6")
         data = {
            "captcha": send_captcha_base64(find_captcha_base64_frpage(0, origin)),
            "captchaData": find_captcha_data(1),
@@ -145,7 +144,7 @@ def send_captcha_to_formfp(ses, origin):
         captchs = re_captchs[0]
 
     if check_capt != "_token":
-        print("Ошибка. Первая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Первая капча была не правильной. Производим повторную отправку 5/6")
         data = {
             "captcha": send_captcha_base64(find_captcha_base64_frpage(0, origin)),
             "captchaData": find_captcha_data(1),
@@ -160,7 +159,7 @@ def send_captcha_to_formfp(ses, origin):
         check_capt = captchs['name']
 
     if check_capt != "_token":
-        print("Ошибка. Первая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Первая капча была не правильной. Производим повторную отправку 6/6")
         data = {
             "captcha": send_captcha_base64(find_captcha_base64_frpage(0, origin)),
             "captchaData": find_captcha_data(1),
@@ -197,7 +196,7 @@ def send_form_to_secpage(sess, login, password, origin):
     captchs = re_captchs[0]
     check_capt = captchs['name']
     if check_capt != "query":
-        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку 1/6")
         new_tag = soup.new_tag('input', id='file_history')
         soup.body.insert(1, new_tag)
         data = {"_token": "",
@@ -218,7 +217,7 @@ def send_form_to_secpage(sess, login, password, origin):
         check_capt = captchs['name']
 
     if check_capt != "query":
-        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку 2/6")
         new_tag = soup.new_tag('input', id='file_history')
         soup.body.insert(1, new_tag)
         data = {"_token": "",
@@ -239,7 +238,7 @@ def send_form_to_secpage(sess, login, password, origin):
         check_capt = captchs['name']
 
     if check_capt != "query":
-        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку 3/6")
         new_tag = soup.new_tag('input', id='file_history')
         soup.body.insert(1, new_tag)
         data = {"_token": "",
@@ -260,7 +259,7 @@ def send_form_to_secpage(sess, login, password, origin):
         check_capt = captchs['name']
 
     if check_capt != "query":
-        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку 4/6")
         new_tag = soup.new_tag('input', id='file_history')
         soup.body.insert(1, new_tag)
         data = {"_token": "",
@@ -281,7 +280,7 @@ def send_form_to_secpage(sess, login, password, origin):
         check_capt = captchs['name']
 
     if check_capt != "query":
-        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку 5/6")
         new_tag = soup.new_tag('input', id='file_history')
         soup.body.insert(1, new_tag)
         data = {"_token": "",
@@ -302,7 +301,7 @@ def send_form_to_secpage(sess, login, password, origin):
         check_capt = captchs['name']
 
     if check_capt != "query":
-        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку")
+        print("Ошибка. Вторая капча была не правильной. Производим повторную отправку 6/6")
         new_tag = soup.new_tag('input', id='file_history')
         soup.body.insert(1, new_tag)
         data = {"_token": "",
@@ -335,7 +334,6 @@ def sess_buy_page(link, sess, origin):
 def pars_momental_value():
     global html, soup, input_token, input_form_uuid, input_product_id, input_momental, input_type, input_roulette_id
     soup = BeautifulSoup(html, "lxml")
-    print(html)
     new_tag = soup.new_tag('input', id='file_history')
     soup.body.insert(1, new_tag)
     inputs_tag = soup.find_all("input")
@@ -408,48 +406,156 @@ def scripts(login, password, i, prodict_href_mom):
     session = get_tor_session()
     ip_adress(session)
 
-    print("Успешно получен новый IP-адрес " + r_s_ip + " потоком - №" + i)
+    print("Успешно получен новый IP-адрес " + r_s_ip + " аккаунтом - №" + i)
     time.sleep(sleep_ip)
 
     send_captcha_to_formfp(session, origin)
-    print("Вход на первой странице выполнен успешно потоком - №" + i)
+    print("Вход на первой странице выполнен успешно аккаунтом - №" + i)
     time.sleep(sleep_first_auth)
 
     send_form_to_secpage(session, login, password, origin)
-    print("Вход на второй странице выполнен успешно потоком - №" + i)
+    print("Вход на второй странице выполнен успешно аккаунтом - №" + i)
     time.sleep(sleep_second_auth)
 
     sess_buy_page(prodict_href_mom, session,origin)
-    print("Сессия страницы моменталки получена успешно потоком - №" + i)
+    print("Сессия страницы моменталки получена успешно аккаунтом - №" + i)
     time.sleep(sleep_session_buy_page)
 
     pars_momental_value()
-    print("Страница мометалки была успешно пропарсена потоком - №" + i)
+    print("Страница мометалки была успешно пропарсена аккаунтом - №" + i)
     time.sleep(sleep_parsing_momental_page)
 
     buy(session, origin)
-    print("Товар был успешно куплен потоком - №" + i)
+    print("Товар был успешно куплен аккаунтом - №" + i)
     time.sleep(sleep_after_buy)
 
     feedback(session, origin)
-    print("Отзыв был успешно оставлен потоком - №" + i)
-    print("До нового аккаунта ожидаем время")
+    print("Отзыв был успешно оставлен аккаунтом - №" + i)
+    print("Ожидание задержки между сменой аккаунтом...")
+    time.sleep(sleep_before_new_iteration)
 
 
-
-for number in range(3):
+for number in range(kol_vo):
     th1 = threading.Thread(target=scripts, args=("bacctest", "KK20814kk", "1", product_href1))
     th1.start()
     th1.join()
-    time.sleep(sleep_before_new_iteration)
+
     th2 = threading.Thread(target=scripts, args=("bacctest2", "kk20814kk", "2", product_href1))
     th2.start()
     th2.join()
-    time.sleep(sleep_before_new_iteration)
+
     th3 = threading.Thread(target=scripts, args=("bacctest3", "Kk20814Kk", "3", product_href1))
     th3.start()
     th3.join()
-    time.sleep(sleep_before_new_iteration)
+
+    th4 = threading.Thread(target=scripts, args=("", "", "4", product_href1))
+    th4.start()
+    th4.join()
+
+    th5 = threading.Thread(target=scripts, args=("", "", "5", product_href1))
+    th5.start()
+    th5.join()
+
+    th6 = threading.Thread(target=scripts, args=("", "", "6", product_href1))
+    th6.start()
+    th6.join()
+
+    th7 = threading.Thread(target=scripts, args=("", "", "7", product_href1))
+    th7.start()
+    th7.join()
+
+    th8 = threading.Thread(target=scripts, args=("", "", "8", product_href1))
+    th8.start()
+    th8.join()
+
+    th9 = threading.Thread(target=scripts, args=("", "", "9", product_href1))
+    th9.start()
+    th9.join()
+
+    th10 = threading.Thread(target=scripts, args=("", "", "10", product_href1))
+    th10.start()
+    th10.join()
+
+    th11 = threading.Thread(target=scripts, args=("", "", "11", product_href1))
+    th11.start()
+    th11.join()
+
+    th12 = threading.Thread(target=scripts, args=("", "", "12", product_href1))
+    th12.start()
+    th12.join()
+
+    th13 = threading.Thread(target=scripts, args=("", "", "13", product_href1))
+    th13.start()
+    th13.join()
+
+    th14 = threading.Thread(target=scripts, args=("", "", "14", product_href1))
+    th14.start()
+    th14.join()
+
+    th15 = threading.Thread(target=scripts, args=("", "", "15", product_href1))
+    th15.start()
+    th15.join()
+
+    th16 = threading.Thread(target=scripts, args=("", "", "16", product_href1))
+    th16.start()
+    th16.join()
+
+    th17 = threading.Thread(target=scripts, args=("", "", "17", product_href1))
+    th17.start()
+    th17.join()
+
+    th18 = threading.Thread(target=scripts, args=("", "", "18", product_href1))
+    th18.start()
+    th18.join()
+
+    th19 = threading.Thread(target=scripts, args=("", "", "19", product_href1))
+    th19.start()
+    th19.join()
+
+    th20 = threading.Thread(target=scripts, args=("", "", "20", product_href1))
+    th20.start()
+    th20.join()
+
+    th21 = threading.Thread(target=scripts, args=("", "", "21", product_href1))
+    th21.start()
+    th21.join()
+
+    th22 = threading.Thread(target=scripts, args=("", "", "22", product_href1))
+    th22.start()
+    th22.join()
+
+    th23 = threading.Thread(target=scripts, args=("", "", "23", product_href1))
+    th23.start()
+    th23.join()
+
+    th24 = threading.Thread(target=scripts, args=("", "", "24", product_href1))
+    th24.start()
+    th24.join()
+
+    th25 = threading.Thread(target=scripts, args=("", "", "25", product_href1))
+    th25.start()
+    th25.join()
+
+    th26 = threading.Thread(target=scripts, args=("", "", "26", product_href1))
+    th26.start()
+    th26.join()
+
+    th27 = threading.Thread(target=scripts, args=("", "", "27", product_href1))
+    th27.start()
+    th27.join()
+
+    th28 = threading.Thread(target=scripts, args=("", "", "28", product_href1))
+    th28.start()
+    th28.join()
+
+    th29 = threading.Thread(target=scripts, args=("", "", "29", product_href1))
+    th29.start()
+    th29.join()
+
+    th30 = threading.Thread(target=scripts, args=("", "", "30", product_href1))
+    th30.start()
+    th30.join()
+
 
 
 
