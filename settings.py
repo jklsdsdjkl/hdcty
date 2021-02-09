@@ -64,7 +64,7 @@ headers_list = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)'
 
 # Api ключ от аккаунта rucaptcha.
 # Узнать можно по ссылке https://rucaptcha.com/setting
-api_key_rucaptcha = "b39d08f4992d5c8e2ca82b1198e938a8"
+api_key_rucaptcha = ""
 
 # Ссылка на страницу оформление моменального клада.
 # (Там где выбирается метод оплаты и купон)
